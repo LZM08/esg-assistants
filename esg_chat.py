@@ -35,15 +35,15 @@ def respond(source):  # source를 매개변수로 받아서 사용하도록 수�
                 {"role": "user", "content": text2}
             ]
         )
-        response_content = response.choices[0].message.content  # 수정된 부분
+        response_content = response.choices[0].message.content 
         if response_content:
             engine.say(response_content)
             engine.runAndWait()
             print(response_content)
             print("계속")
-            respond(source)  # 수정된 부분
+            respond(source)  
     else:
-        request()  # 이 부분은 변경하지 않았습니다.
+        request()
 
 
 # request 함수 정의
